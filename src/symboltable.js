@@ -535,12 +535,16 @@ export class SymbolTable<Key:Comparable, Value> {
 	_ensureKeyHasSameType (key: any): void {
 		const message = "Given key must be of same type as existing keys";
 		if (this.size === 0) return;
-		if (typeof key === "string" 	&& typeof this._root.key !== "string") 			throw new TypeError(message);
-		if (typeof key === "boolean" 	&& typeof this._root.key !== "boolean") 		throw new TypeError(message);
-		if (typeof key === "number" 	&& typeof this._root.key !== "number") 			throw new TypeError(message);
-		if (typeof key === "function" && typeof this._root.key !== "function") 		throw new TypeError(message);
-		if (typeof key === "symbol" 	&& typeof this._root.key !== "symbol") 			throw new TypeError(message);
-		if (Object.getPrototypeOf(key) !== Object.getPrototypeOf(this._root.key))	throw new TypeError(message);
+		if (typeof key === "string" 	&& this._root != null && typeof this._root.key !== "string") 		throw new TypeError(message);
+		if (typeof key === "boolean" 	&& this._root != null && typeof this._root.key !== "boolean") 	throw new TypeError(message);
+		if (typeof key === "number" 	&& this._root != null && typeof this._root.key !== "number") 		throw new TypeError(message);
+		if (typeof key === "function" && this._root != null && typeof this._root.key !== "function") 	throw new TypeError(message);
+		
+		// $FlowFixMe Flow doesn't know about the simple type 'symbol'.
+		if (typeof key === "symbol" 	&& this._root != null && typeof this._root.key !== "symbol") 		throw new TypeError(message);
+
+		if (this._root == null) return;
+		if (Object.getPrototypeOf(this._root.key) !== Object.getPrototypeOf(key))	throw new TypeError(message);
 	}
 }
 

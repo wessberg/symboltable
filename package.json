@@ -1,6 +1,6 @@
 {
 	"name": "symboltable",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A Symbol Table implementation for JavaScript based on a Red-Black Binary Search Tree.",
 	"main": "symboltable.js",
 	"jsnext:main": "native.js",
@@ -14,6 +14,11 @@
 		"build:all": "npm run build:es5 & npm run build:native & npm run build:typed & wait"
 	},
 	"keywords": [
+		"flow",
+		"typed",
+		"es-modules",
+		"es2015",
+		"generic",
 		"collections",
 		"computerscience",
 		"symbol table",

@@ -8,7 +8,7 @@ Simply do: `npm install symboltable`.
 
 It is an ordered symbol table of generic key-value pairs based on a [Red-Black Binary Search Tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree), inspired by the implementation of [Robert Sedgewick](https://www.cs.princeton.edu/~rs/) and [Kevin Wayne](https://www.cs.princeton.edu/~wayne/contact/).
 
-You don't need a Computer Science degree to know about symbol tables. It is collections of key-value pairs. 
+You don't need a Computer Science degree to know about symbol tables. It is collections of key-value pairs.
 An object literal in Javascript, for instance, is a symbol table - where only strings can be used as keys. In Python, a `Dictionary` is a Symbol table.
 
 In ES2015, the [Map collection type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) came to JavaScript which is an
@@ -24,7 +24,7 @@ This is a powerful implementation which enables you to do *all* operations in *O
 
 What this means is that you can `put`, `get` and `delete` incredibly fast for even large collections.
 Because it is ordered, it also enables you to easily get the minimum and maximum values fast as well as other
-cool things such as the `ceiling()`, `floor()`, `select()` and `rank()` operations which will be described in 
+cool things such as the `ceiling()`, `floor()`, `select()` and `rank()` operations which will be described in
 the documentation below.
 
 ## Example
@@ -41,6 +41,10 @@ for (let child of Array.from(document.body.children)) {
 ```
 
 ## Changelog:
+
+**v0.02**:
+
+- Fixed a few typing errors.
 
 **v0.01**:
 - First release!

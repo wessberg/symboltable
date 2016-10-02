@@ -3,8 +3,10 @@ npm-debug.log
 flow-typed
 .DS_Store
 .babelrc
+.eslintrc.js
+.flowconfig
 jsconfig.json
 .idea
-typed.js
+/typed.js
 /symboltable.js
-native.js
+/native.js
